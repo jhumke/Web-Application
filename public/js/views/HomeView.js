@@ -7,13 +7,11 @@ define([
 
     var HomeView = Backbone.View.extend({
 
-    	initialize:function () {
-            this.render();
-    	},
-
     	render:function () {
             return _.template(HomeTemplate, {});            
     	}
 
     });
+
+    return HomeView;
 });

@@ -19,6 +19,34 @@ require.config({
     }
 });
 
+
+require([
+    'backbone'
+], function (Backbone) { 
+
+    Backbone.View.prototype.close = function() {
+        if (this.onClose) {
+          this.onClose();
+        }
+
+        if (this.childViews) {
+            _.each(this.childViews, function (child) {
+                child.close();
+            });
+        }
+
+        for (var prop in this) {
+            if (this[prop] instanceof Backbone.View) {
+                this[prop].close();
+            }
+        }
+
+        this.unbind();
+        this.remove();
+    };
+});
+
+
 require([
     'app'
 ], function (App) {

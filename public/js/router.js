@@ -29,17 +29,16 @@ define([
 			var homeView = new HomeView();
 			this.changeView(homeView);
 		},
-        showProducts : function() {
-        	var products = new ProductCollection();
+		showProducts : function() {
+			var products = new ProductCollection();
+			var that = this;
 
-        	var that = this;
-
-        	products.fetch({
-        		success : function(collection, response) {
-        			var productsView = new ProductsView({collection : collection});
-        			that.changeView(productsView);
-        		}
-        	});
+			products.fetch({
+				success : function(collection, response) {
+					var productsView = new ProductsView({collection : collection});
+					that.changeView(productsView);
+				}
+			});
 		},
 		fetchError : function(error){
 		}

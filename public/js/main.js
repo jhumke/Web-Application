@@ -41,8 +41,8 @@ require([
             }
         }
 
+        this.$el.empty();
         this.unbind();
-        this.remove();
     };
 });
 

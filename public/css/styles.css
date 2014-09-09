@@ -62,16 +62,12 @@ legend {
     font-family: 'Andika';
 }
 
-.home-hero {
+body {
     font-family: "Andika";
-    font-size: 36;
     color: white;
+    background-size: device-width;
     background-image: url('img/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: -19px;
-    padding: 180px;
-    text-align : center;
+    background-repeat: repeat;
     text-shadow: 1px 1px 1px #000;
 }
 

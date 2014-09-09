@@ -8,12 +8,8 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        }
-    </style>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
 
@@ -30,24 +26,64 @@
 </head>
 
 <body>
+<div id="wrapper" class="home-hero">
 
-<div class="header"></div>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Jhumke
+                    </a>
+                </li>
+                <li>
+                    <a href="/#/products/Bangle">Necklace</a>
+                </li>
+                <li>
+                    <a href="/#/products/EarRing">Ear Rings</a>
+                </li>
+                <li>
+                    <a href="/#/products/Bracelet">Braclets</a>
+                </li>
+                <li>
+                    <a href="/#/products/Clip">Clips</a>
+                </li>
+                <li>
+                    <a href="/#/products/Anklet">Anklets</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-<div class="container">
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
 
-    <div class="row-fluid">
-        <div id="content" class="span12>"></div>
     </div>
+    <!-- /#wrapper -->
 
-    <footer class="footer">
-    </footer>
-
-</div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
 
 
 </body>

@@ -21,7 +21,7 @@ define([
 					this.currentView.close();
 				}
 				this.currentView = view;
-				$('.container').html(view.render());
+				$('.container').html(view.render().el);
 			}
 			setView(view);
 		},

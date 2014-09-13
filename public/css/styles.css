@@ -63,10 +63,10 @@ legend {
 }
 
 body {
-    font-family: "Andika";
-    color: white;
+    /*font-family: "Andika";*/
+    color: black;
     background-size: device-width;
-    background-image: url('img/bg.jpg');
+    /*background-image: url('img/bg.jpg');*/
     background-repeat: repeat;
     text-shadow: 1px 1px 1px #000;
 }

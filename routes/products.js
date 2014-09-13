@@ -128,13 +128,34 @@ exports.deleteProduct = function(req, res) {
 var populateDB = function() {
 
     var products = [
-    {
-        "name" : "Indian Bangle",
-        "price" : "10.50",
-        "category" : "Bangle",
-        "tags" : [ "green", "gold"],
-	    "description" : "This is a red bangle" 
-    }
+        {
+            "name" : "Indian Necklace",
+            "price" : "10.50",
+            "category" : "Necklace",
+            "tags" : [ "green", "gold"],
+    	    "description" : "This is a Necklace" 
+        },
+        {
+            "name" : "Indian Clips",
+            "price" : "10.50",
+            "category" : "Clip",
+            "tags" : [ "green", "blue"],
+            "description" : "This is a Clip" 
+        },
+        {
+            "name" : "Indian Bracelet",
+            "price" : "10.50",
+            "category" : "Bracelet",
+            "tags" : [ "green", "red"],
+            "description" : "This is a Bracelet" 
+        },
+        {
+            "name" : "Indian Anklet",
+            "price" : "10.50",
+            "category" : "Anklet",
+            "tags" : [ "green", "pink"],
+            "description" : "This is a Anklet" 
+        }
     ];
 
     db.collection('products', function(err, collection) {

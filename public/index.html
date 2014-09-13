@@ -7,84 +7,135 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Le styles -->    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
+    
+    <!--<link href="css/styles.css" rel="stylesheet">-->
     <link href="css/simple-sidebar.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
+    
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <script src="http://use.edgefonts.net/andika.js"></script>
-    <script src="http://use.edgefonts.net/arvo.js"></script>
 
     <script data-main="js/main" src="js/require.js"></script>
 
 </head>
 
 <body>
-<div id="wrapper" class="home-hero">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Jhumke
-                    </a>
+<nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Jhumke</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+                <!--
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-gift"></span> Products <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/#/products/Bangle">Necklace</a>
+                        </li>
+                        <li>
+                            <a href="/#/products/EarRing">Ear Rings</a>
+                        </li>
+                        <li>
+                            <a href="/#/products/Bracelet">Braclets</a>
+                        </li>
+                        <li>
+                            <a href="/#/products/Clip">Clips</a>
+                        </li>
+                        <li>
+                            <a href="/#/products/Anklet">Anklets</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="/#/products/Bangle">Necklace</a>
-                </li>
-                <li>
-                    <a href="/#/products/EarRing">Ear Rings</a>
-                </li>
-                <li>
-                    <a href="/#/products/Bracelet">Braclets</a>
-                </li>
-                <li>
-                    <a href="/#/products/Clip">Clips</a>
-                </li>
-                <li>
-                    <a href="/#/products/Anklet">Anklets</a>
-                </li>
+                -->
+                <li><a href="#"><span class="glyphicon glyphicon-book"></span> Our Story </a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
+    </div>
+</nav>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="container">
-                        </div>
+<div class="jumbotron">
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-md-9">
+                    <div class="container">
                     </div>
                 </div>
-            </div>
+
+                <div class="col-md-3 sidebar">
+                    <div class="mini-submenu visible">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+                    <div class="list-group">
+                        <a href="/#/products" class="list-group-item">
+                            All
+                            <span class="pull-right" id="slide-submenu">
+                            </span>
+                        </a>
+                        <a href="/#/products/Necklace" class="list-group-item">
+                             Necklace
+                        </a>
+                        <a href="/#/products/EarRing" class="list-group-item">
+                             Ear Rings
+                        </a>
+                        <a href="/#/products/Bracelet" class="list-group-item">
+                             Bracelets
+                        </a>
+                        <a href="/#/products/Clip" class="list-group-item">
+                             Clips 
+                        </a>
+                        <a href="/#/products/Anklet" class="list-group-item">
+                             Anklets
+                        </a>
+                    </div>   
+                </div>      
+            </div>    
         </div>
-        <!-- /#page-content-wrapper -->
-
     </div>
-    <!-- /#wrapper -->
+</div>
 
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-<!-- Menu Toggle Script -->
-<script>
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-});
+<script type="text/javascript">
+    $(function(){
+
+    $('#slide-submenu').on('click',function() {                 
+        $(this).closest('.list-group').fadeOut('slide',function(){
+            $('.mini-submenu').fadeIn();    
+        });
+        
+      });
+
+    $('.mini-submenu').on('click',function(){       
+        $(this).next('.list-group').toggle('slide');
+        $('.mini-submenu').hide();
+    })
+})
 </script>
-
 
 </body>
 </html>

@@ -4,7 +4,13 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('localhost', 27017, {auto_reconnect: true});
+    mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT
+
+var ipaddress = process.env.OPENSHIFT_MONGODB_DB_HOST || "localhost";
+var port = process.env.OPENSHIFT_MONGODB_DB_PORT || 27017;
+
+
+var server = new Server(ipaddress, port, {auto_reconnect: true});
 db = new Db('productdb', server);
 
 db.open(function(err, db) {

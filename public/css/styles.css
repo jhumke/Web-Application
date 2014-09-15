@@ -29,3 +29,8 @@ body {
 .navbar-custom { 
   font-size: 70;
 }
+
+.footer {
+    min-height: 80px;
+    background-color: #026c73;
+}

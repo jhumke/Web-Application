@@ -4,8 +4,6 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-    mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT
-
 var ipaddress = process.env.OPENSHIFT_MONGODB_DB_HOST || "localhost";
 var port = process.env.OPENSHIFT_MONGODB_DB_PORT || 27017;
 

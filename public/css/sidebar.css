@@ -47,15 +47,14 @@
   cursor: pointer;
 }
 
-body {
-  background-color: white;
+.sidebar-3d {
+    perspective: 1500px;
+    padding-bottom: 10px;
 }
 
-.jumbotron {
-  background-color: white;
-}
-
-.navbar-custom { 
-  padding: 10px;
-  font-size: 70;
+.sidebar-3d a {
+    background-color: #026c73;
+    color: white;
+    transform: rotateX(-10deg) rotateY(15deg);
+    font-size: 20px;
 }

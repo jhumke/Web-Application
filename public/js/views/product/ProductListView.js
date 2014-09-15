@@ -2,27 +2,27 @@ define([
   'jquery',
   'underscore',
   'backbone',
-  'models/Product',
-  'text!templates/product/list.html'
-], function($, _, Backbone, ProductModel, productsListTemplate){
+  'views/product/ProductListItemView'
+], function($, _, Backbone, ProductListItemView){
   var ProductListView = Backbone.View.extend({
     
-    el: $(".container"),
+    tagName: "div",
 
     render: function() {
-        
-          var data = {
-            products: this.collection.models,
-            _: _ 
-          };
 
-          var compiledTemplate = _.template( productsListTemplate, data );
-          return compiledTemplate; 
-      }
+        var products = this.collection.models;
 
-      
+        $(this.el).html('<div class="thumbnails"></div>');
 
-    });
+        for (var i = 0; i < products.length; i++) {
+            $('.thumbnails', this.el).append(new ProductListItemView({model: products[i]}).render().el);
+        }
+
+        return this;
+    }
+
+  });
 
   return ProductListView;
+
 });

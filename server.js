@@ -1,3 +1,5 @@
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 var express = require('express')
 var product = require('./routes/products');
  
@@ -18,5 +20,5 @@ app.post('/products', product.addProduct);
 app.put('/products/:id', product.updateProduct);
 app.delete('/products/:id', product.deleteProduct);
  
-app.listen(3000);
+app.listen(port, ipaddress);
 console.log('Listening on port 3000...');

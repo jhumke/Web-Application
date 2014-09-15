@@ -1,0 +1,45 @@
+<div class="col-md-4 col-sm-4 col-xs-12">
+	<div id="carousel-<%= product.get("imagePath") %>" class="carousel slide product-item" data-ride="carousel" data-interval="3000">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	  <li data-target="#carousel-<%= product.get("imagePath") %>" data-slide-to="0" class="active"></li>	
+	  <% for(var i=1; i < product.get("imageCount"); i++){%>
+    	<li data-target="#carousel-<%= product.get("imagePath") %>" data-slide-to="<%= i %>"></li>
+	  <% } %>
+	  </ol>
+	 
+	  <!-- Wrapper for slides -->
+      <div class="carousel-inner ">
+	    <div class="item active">
+	      <img src="imgs/product/<%= product.get("imagePath") %>/1.jpg" alt="..." class="img-responsive img-rounded" >
+	      <!--<div class="carousel-caption">
+	          <h3><%= product.get("name") %> @ <%= product.get("price") %></h3>
+	      </div>-->
+	    </div>
+	  <% for(var i=2; i <= product.get("imageCount"); i++){%>
+	    <div class="item">
+	      <img src="imgs/product/<%= product.get("imagePath") %>/<%= i %>.jpg" alt="..." class="img-responsive img-rounded" >
+	      <!--<div class="carousel-caption">
+	          <h3><%= product.get("name") %> @ <%= product.get("price") %></h3>
+	      </div>-->
+	    </div>
+	  <% } %>
+	  </div>
+
+	 
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-<%= product.get("imagePath") %>" role="button" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-<%= product.get("imagePath") %>" role="button" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div> <!-- Carousel -->
+	<div class="product-footer">
+		<div>
+			<%= product.get("name") %> @ <%= product.get("price") %><br/>
+			<%= product.get("description") %> 
+		</div>
+	</div>
+
+</div>

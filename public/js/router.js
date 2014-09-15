@@ -11,6 +11,7 @@ define([
 
 		routes : {
 			'products' : 'showProducts',
+			'products/:category' : 'showProducts',
 			'*default' : 'showHome'
 		},
 
@@ -20,18 +21,21 @@ define([
 					this.currentView.close();
 				}
 				this.currentView = view;
-				$('.container').html(view.render());
+				$('.container').html(view.render().el);
 			}
-
 			setView(view);
 		},
 		showHome : function() {
 			var homeView = new HomeView();
 			this.changeView(homeView);
 		},
-		showProducts : function() {
+		showProducts : function(category) {
 			var products = new ProductCollection();
 			var that = this;
+
+			if(category) {
+				products.url += '/c/' + category 	
+			}
 
 			products.fetch({
 				success : function(collection, response) {

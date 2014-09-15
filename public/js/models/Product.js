@@ -16,7 +16,8 @@ define([
 			category : "",
 			description : "",
 			tags : [],
-			imagePath : ""
+			imagePath : "",
+			imageCount : 1
 		},
 
 		initialize: function() {

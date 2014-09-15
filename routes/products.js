@@ -4,7 +4,13 @@ var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server('localhost', 27017, {auto_reconnect: true});
+    mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT
+
+var ipaddress = process.env.OPENSHIFT_MONGODB_DB_HOST || "localhost";
+var port = process.env.OPENSHIFT_MONGODB_DB_PORT || 27017;
+
+
+var server = new Server(ipaddress, port, {auto_reconnect: true});
 db = new Db('productdb', server);
 
 db.open(function(err, db) {
@@ -128,13 +134,42 @@ exports.deleteProduct = function(req, res) {
 var populateDB = function() {
 
     var products = [
-    {
-        "name" : "Indian Bangle",
-        "price" : "10.50",
-        "category" : "Bangle",
-        "tags" : [ "green", "gold"],
-	    "description" : "This is a red bangle" 
-    }
+        {
+            "name" : "Indian Necklace",
+            "price" : "10.50",
+            "category" : "Necklace",
+            "tags" : [ "green", "gold"],
+    	    "description" : "This is a Necklace" ,
+            "imagePath" : "Necklace",
+            "imageCount" : "2"
+        },
+        {
+            "name" : "Indian Clips",
+            "price" : "10.50",
+            "category" : "Clip",
+            "tags" : [ "green", "blue"],
+            "description" : "This is a Clip",
+            "imagePath" : "Clip",
+            "imageCount" : "2" 
+        },
+        {
+            "name" : "Indian Bracelet",
+            "price" : "10.50",
+            "category" : "Bracelet",
+            "tags" : [ "green", "red"],
+            "description" : "This is a Bracelet",
+            "imagePath" : "Bracelet",
+            "imageCount" : "3" 
+        },
+        {
+            "name" : "Indian Anklet",
+            "price" : "10.50",
+            "category" : "Anklet",
+            "tags" : [ "green", "pink"],
+            "description" : "This is a Anklet" ,
+            "imagePath" : "Anklet",
+            "imageCount" : "3"
+        }
     ];
 
     db.collection('products', function(err, collection) {

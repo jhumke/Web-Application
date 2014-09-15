@@ -17,7 +17,9 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
     
     <!--<link href="css/styles.css" rel="stylesheet">-->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="css/sidebar.css" rel="stylesheet">
+    <link href="css/navbar-custom.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -30,7 +32,7 @@
 
 <body>
 
-<nav id="myNavbar" class="navbar navbar-default navbar-inverse" role="navigation">
+<nav id="myNavbar" class="navbar  navbar-custom navbar-inverse navbar-fixed-top " role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="container-fluid">
         <div class="navbar-header">
@@ -44,29 +46,7 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="nav navbar-nav">
-                <!--
-                <li class="dropdown">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-gift"></span> Products <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="/#/products/Bangle">Necklace</a>
-                        </li>
-                        <li>
-                            <a href="/#/products/EarRing">Ear Rings</a>
-                        </li>
-                        <li>
-                            <a href="/#/products/Bracelet">Braclets</a>
-                        </li>
-                        <li>
-                            <a href="/#/products/Clip">Clips</a>
-                        </li>
-                        <li>
-                            <a href="/#/products/Anklet">Anklets</a>
-                        </li>
-                    </ul>
-                </li>
-                -->
+            <ul class="nav navbar-nav pull-right">
                 <li><a href="#"><span class="glyphicon glyphicon-book"></span> Our Story </a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Us </a></li>
             </ul>
@@ -78,12 +58,6 @@
     <div id="page-content-wrapper">
         <div class="container-fluid">
             <div class="row">
-
-                <div class="col-md-9">
-                    <div class="container">
-                    </div>
-                </div>
-
                 <div class="col-md-3 sidebar">
                     <div class="mini-submenu visible">
                         <span class="icon-bar"></span>
@@ -112,7 +86,11 @@
                              Anklets
                         </a>
                     </div>   
-                </div>      
+                </div>  
+                <div class="col-md-9 col-xs-12">
+                    <div class="container">
+                    </div>
+                </div>    
             </div>    
         </div>
     </div>

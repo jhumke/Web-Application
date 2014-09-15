@@ -133,28 +133,36 @@ var populateDB = function() {
             "price" : "10.50",
             "category" : "Necklace",
             "tags" : [ "green", "gold"],
-    	    "description" : "This is a Necklace" 
+    	    "description" : "This is a Necklace" ,
+            "imagePath" : "Necklace",
+            "imageCount" : "2"
         },
         {
             "name" : "Indian Clips",
             "price" : "10.50",
             "category" : "Clip",
             "tags" : [ "green", "blue"],
-            "description" : "This is a Clip" 
+            "description" : "This is a Clip",
+            "imagePath" : "Clip",
+            "imageCount" : "2" 
         },
         {
             "name" : "Indian Bracelet",
             "price" : "10.50",
             "category" : "Bracelet",
             "tags" : [ "green", "red"],
-            "description" : "This is a Bracelet" 
+            "description" : "This is a Bracelet",
+            "imagePath" : "Bracelet",
+            "imageCount" : "3" 
         },
         {
             "name" : "Indian Anklet",
             "price" : "10.50",
             "category" : "Anklet",
             "tags" : [ "green", "pink"],
-            "description" : "This is a Anklet" 
+            "description" : "This is a Anklet" ,
+            "imagePath" : "Anklet",
+            "imageCount" : "3"
         }
     ];
 

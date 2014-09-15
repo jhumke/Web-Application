@@ -1,121 +1,30 @@
-.brand {
-    font-family: 'Arvo';
+.product-item {
+    -webkit-box-shadow: 10px 10px 20px 10px rgba(49, 178, 178, 0.63);
+    -moz-box-shadow:    10px 10px 20px 10px rgba(49, 178, 178, 0.63);
+    box-shadow:         4px 4px 8px 2px rgba(49, 178, 178, 0.83);
 }
 
-a.plain:link {
-    color: #333;
-    text-decoration: none;
+.product-footer {
+    perspective: 1500px;
+    padding-bottom: 10px;
 }
 
-a.plain:active {
-    color: #333;
-    text-decoration: none;
-}
-
-a.plain:visited {
-    color: #333;
-    text-decoration: none;
-}
-
-a.plain:hover {
-    color: #333;
-    text-decoration: none;
-}
-
-.status-bar {
-    height: 60px;
-}
-
-.about-icon {
-    float: left;
-    margin-right: 12px;
-}
-
-.footer {
-    margin-top: 30px;
-    padding-top: 10px;
-    color: #999;
-    border-top: solid 1px #ddd;
-}
-
-.footer > p {
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
-}
-
-h5 {
-    width: 100%;
-    white-space: nowrap;
-    margin-bottom: 4px;
-}
-
-.thumbnail {
-    min-width: 260px;
-}
-
-.thumbnails li {
-    margin-left: 0px !important;
-    margin-right: 20px !important;
-}
-
-legend {
-    font-family: 'Andika';
+.product-footer div {
+    background-color: #bf328f;
+    color: white;
+    transform: rotateX(-10deg) rotateY(15deg);
+    font-size: 20px;
 }
 
 body {
-    /*font-family: "Andika";*/
-    color: black;
-    background-size: device-width;
-    /*background-image: url('img/bg.jpg');*/
-    background-repeat: repeat;
-    text-shadow: 1px 1px 1px #000;
+  padding-top: 50px;  
+  background-color: white;
 }
 
-@media only screen and ( max-width : 1000px ) {
-    .home-hero {
-        padding:100px;
-    }
+.jumbotron {
+  background-color: white;
 }
 
-@media only screen and ( max-width : 480px ) {
-    .home-hero {
-        padding:32px;
-    }
-}
-
-
-.home-hero .btn {
-    font-family: "arvo";
-    width: 160px;
-    margin: 10px 4px;
-}
-
-/* Social proof buttons from GitHub & Twitter */
-.bs-docs-social {
-    padding: 15px 0;
-    text-align: center;
-    background-color: #f5f5f5;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Quick links on Home */
-.bs-docs-social-buttons {
-    margin-left: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-.bs-docs-social-buttons li {
-    display: inline-block;
-    padding: 5px 8px;
-    line-height: 1;
-    *display: inline;
-    *zoom: 1;
-}
-
-.well h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+.navbar-custom { 
+  font-size: 70;
 }

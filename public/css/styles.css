@@ -10,10 +10,40 @@
 }
 
 .product-footer div {
-    background-color: #bf328f;
     color: white;
     transform: rotateX(-10deg) rotateY(15deg);
     font-size: 20px;
+}
+
+
+.product-footer div {
+    color: white;
+    transform: rotateX(-10deg) rotateY(15deg);
+    font-size: 20px;
+}
+
+.product-Necklace{
+  background-color: #505A91;
+}
+
+.product-EarRing{
+  background-color: #8E2FBD;
+}
+
+.product-Bracelet{
+  background-color: #360961;
+}
+
+.product-Clip{
+  background-color: #8F2391;
+}
+
+.product-Anklet{
+  background-color: #7E85DE;
+}
+
+.product-default{
+  background-color: #DB6EC0;
 }
 
 
@@ -24,6 +54,8 @@ body {
 
 .jumbotron {
   background-color: white;
+  
+  padding: 25px;
 }
 
 .navbar-custom { 
@@ -31,6 +63,10 @@ body {
 }
 
 .footer {
-    min-height: 80px;
     background-color: #026c73;
+    position: fixed;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    color: white;
 }

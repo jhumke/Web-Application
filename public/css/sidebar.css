@@ -28,15 +28,14 @@
 }
 
 .list-group-item {
-  background-color: #026c73;
+  /*background-color: #026c73;*/
   color: #ffffff;
 }
 
 .list-group-item:hover{
   text-transform: uppercase;
   text-align: right;
-  background-color: #42acb8;
-  color: yellow;
+  color: white;
 }
 
 #slide-submenu{
@@ -53,7 +52,6 @@
 }
 
 .sidebar-3d a {
-    background-color: #026c73;
     color: white;
     transform: rotateX(-10deg) rotateY(15deg);
     font-size: 20px;

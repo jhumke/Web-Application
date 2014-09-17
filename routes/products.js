@@ -6,22 +6,39 @@ var Server = mongo.Server,
 
 var ipaddress = process.env.OPENSHIFT_MONGODB_DB_HOST || "localhost";
 var port = process.env.OPENSHIFT_MONGODB_DB_PORT || 27017;
+var dbName = process.env.OPENSHIFT_APP_NAME || 'productdb';
+var dbUser = process.env.OPENSHIFT_MONGODB_DB_USERNAME;
+var dbPass = process.env.OPENSHIFT_MONGODB_DB_PASSWORD;
 
 
 var server = new Server(ipaddress, port, {auto_reconnect: true});
-db = new Db('productdb', server);
+db = new Db(dbName, server);
 
 db.open(function(err, db) {
-    if(!err) {
-        console.log("Connected to 'productdb' database");
-        db.collection('products', {strict:true}, function(err, collection) {
+    if(err)
+        throw err;
+
+    if(typeof dbUser === "undefined") {
+        openCollection();
+    } else {
+        db.authenticate(dbUser, dbPass, {authdb: "admin"}, function(err, result) {
+            if(err)
+                throw err;
+            openCollection();
+        });
+    }
+});
+
+
+function openCollection() {
+    console.log("Connected to %s database", dbName);
+    db.collection('products', {strict:true}, function(err, collection) {
             if (err) {
                 console.log("The 'products' collection doesn't exist. Creating it with sample data...");
                 populateDB();
             }
         });
-    }
-});
+}
 
 exports.findById = function(req, res) {
     var id = req.params.id;

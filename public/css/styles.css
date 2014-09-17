@@ -6,7 +6,7 @@
 
 .product-footer {
     perspective: 1500px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 .product-footer div {
@@ -46,6 +46,10 @@
   background-color: #DB6EC0;
 }
 
+#featured{
+  vertical-align: middle;
+}
+
 
 body {
   padding-top: 50px;  
@@ -63,7 +67,7 @@ body {
 }
 
 .footer {
-    background-color: #026c73;
+    background-color: #434edb;
     position: fixed;
     height: 60px;
     bottom: 0;

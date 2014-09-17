@@ -26,8 +26,16 @@ define([
 			setView(view);
 		},
 		showHome : function() {
-			var homeView = new HomeView();
-			this.changeView(homeView);
+
+			var products = new ProductCollection();
+			var that = this;
+
+			products.fetch({
+				success : function(collection, response) {
+					var homeView = new HomeView({collection : collection});
+					that.changeView(homeView);
+				}
+			});
 		},
 		showProducts : function(category) {
 			var products = new ProductCollection();

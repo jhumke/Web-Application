@@ -50,6 +50,10 @@
   vertical-align: middle;
 }
 
+#shb_custom{
+  float: right;
+}
+
 
 body {
   padding-top: 50px;  
